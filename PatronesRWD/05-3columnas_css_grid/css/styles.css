@@ -49,3 +49,21 @@ p {
 
 
 /** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .columnas{
+        display: grid;
+        grid-template-areas: "derecha contenido izquierda";
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-auto-flow: column;  /* es importante para que el html no acomode automaticamente las columnas */
+        gap: 2rem;
+    }
+
+    .lado1{
+        grid-column: derecha;
+    }
+
+    .lado2{
+        grid-column: izquierda;
+    }
+  
+}
